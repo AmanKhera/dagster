@@ -86,6 +86,11 @@ export type RunsFeedRootQuery = {
                 repositoryName: string;
                 repositoryLocationName: string;
               } | null;
+              assetCheckEvaluations: Array<{
+                __typename: 'AssetCheckEvaluation';
+                checkName: string;
+                success: boolean;
+              }>;
               tags: Array<{__typename: 'PipelineTag'; key: string; value: string}>;
               assetSelection: Array<{__typename: 'AssetKey'; path: Array<string>}> | null;
               assetCheckSelection: Array<{
@@ -98,4 +103,4 @@ export type RunsFeedRootQuery = {
       };
 };
 
-export const RunsFeedRootQueryVersion = '595b8ee4f5fa5b704053ff7a3c36b8af752935c61e35b39bc75b541d5322d043';
+export const RunsFeedRootQueryVersion = '1b084f1fe736b7143dd520263f3775f6634686ee6d11908fdf7b11ec7ec809ea';
